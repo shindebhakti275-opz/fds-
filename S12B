@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+data = np.random.randint(10, 50, 50)
+
+plt.figure(figsize=(8, 4))
+plt.subplot(1, 2, 1)
+plt.boxplot(data)
+plt.title('Original Boxplot')
+
+data_with_outliers = np.append(data, [150, -50])
+
+plt.subplot(1, 2, 2)
+plt.boxplot(data_with_outliers)
+plt.title('Boxplot with Outliers')
+
+plt.tight_layout()
+plt.show()
