@@ -1,0 +1,12 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'A': [1, 2, 3, None, 5],
+    'B': ['x', 'y', 'z', 'w', 'v']
+})
+
+print("Shape:", df.shape)
+print("Size:", df.size)
+print("Data Types:\n", df.dtypes)
+print("Statistical Details:\n", df.describe())
+print("Missing Values:\n", df.isnull().sum())
