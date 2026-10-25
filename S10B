@@ -1,0 +1,24 @@
+import pandas as pd
+import numpy as np
+
+data = {
+    'emp_name': [f'Emp_{i}' for i in range(1, 11)],
+    'age': np.random.randint(25, 50, 10),
+    'salary': np.random.randint(30000, 80000, 10)
+}
+df = pd.DataFrame(data)
+
+print("Shape:", df.shape)
+print("\nDescription:\n", df.describe())
+
+extra_rows = pd.DataFrame({
+    'emp_name': ['Emp_1', 'Emp_2', None, 'Emp_11', 'Emp_12'],
+    'age': [df['age'].iloc[0], None, 30, 40, 45],
+    'salary': [df['salary'].iloc[0], 50000, None, 60000, 70000]
+})
+
+df = pd.concat([df, extra_rows], ignore_index=True)
+df['Department'] = np.nan
+
+print("\nUpdated DataFrame:")
+print(df)
