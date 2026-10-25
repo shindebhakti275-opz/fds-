@@ -1,0 +1,9 @@
+import pandas as pd
+
+laptop_data = {
+    'Laptop_Model': ['MacBook Pro', 'Dell XPS', 'Lenovo ThinkPad', 'HP Spectre', 'Asus ROG'],
+    'Cost': [150000, 120000, 95000, 110000, 130000]
+}
+
+df = pd.DataFrame(laptop_data)
+print(df)
