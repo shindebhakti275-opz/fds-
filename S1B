@@ -1,0 +1,19 @@
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+
+raw_data = {
+    'Name': ['Smaran', 'Sachin', 'Samarpan', 'Spandan', 'Shravan'],
+    'Address': ['Pune', 'Mumbai', 'Delhi', 'Chennai', 'Madurai'],
+    'Age': [20, 23, 19, 21, 22],
+    'Class': ['BE', 'BSc(CS)', 'BVOC', 'BCom', 'BSc']
+}
+pd.DataFrame(raw_data).to_csv('StudentData.csv', index=False)
+
+df = pd.read_csv('StudentData.csv')
+
+df_encoded = pd.get_dummies(df, columns=['Name'])
+
+le = LabelEncoder()
+df_encoded['Class_Encoded'] = le.fit_transform(df['Class'])
+
+print(df_encoded)
