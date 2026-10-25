@@ -1,0 +1,19 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+df['species'] = [iris.target_names[i] for i in iris.target]
+
+fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+features = iris.feature_names
+
+for i, col in enumerate(features):
+    ax = axes[i // 2, i % 2]
+    sns.boxplot(x='species', y=col, data=df, ax=ax)
+    ax.set_title(f'{col} by Species')
+
+plt.tight_layout()
+plt.show()
