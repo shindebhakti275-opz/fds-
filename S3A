@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np
+
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'Alice', 'Eve'],
+    'Attendance': [90, 80, 85, 90, 95],
+    'Score': [88, np.nan, 75, 88, np.nan]
+}
+
+df = pd.DataFrame(data)
+
+print("Duplicate Rows Mask:")
+print(df.duplicated())
+
+mean_score = df['Score'].mean()
+df['Score'] = df['Score'].fillna(mean_score)
+
+print("\nDataFrame after fillna:")
+print(df)
