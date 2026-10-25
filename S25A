@@ -1,0 +1,11 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'Product': ['Pen', 'Notebook', 'Eraser'],
+    'Quantity': [10, 5, 20],
+    'Price': [15, 60, 5]
+})
+
+print("DataFrame:\n", df)
+print(f"Total Quantity: {df['Quantity'].sum()}")
+print(f"Average Price: {df['Price'].mean():.2f}")
