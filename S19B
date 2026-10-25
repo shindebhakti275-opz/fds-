@@ -1,0 +1,14 @@
+import numpy as np
+
+data = np.array([[10, 20, 30], [40, 50, 60]])
+weights = np.array([0.2, 0.3, 0.5])
+
+weighted_arithmetic = np.average(data, axis=1, weights=weights)
+
+weighted_geometric = np.exp(np.average(np.log(data), axis=1, weights=weights))
+
+weighted_harmonic = 1 / np.average(1 / data, axis=1, weights=weights)
+
+print("Weighted Arithmetic Mean:", weighted_arithmetic)
+print("Weighted Geometric Mean:", weighted_geometric)
+print("Weighted Harmonic Mean:", weighted_harmonic)
