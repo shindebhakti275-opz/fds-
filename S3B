@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+data = np.random.randint(1, 100, 25)
+
+fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+
+axes[0, 0].plot(data, color='blue', marker='o')
+axes[0, 0].set_title('Line Chart')
+
+axes[0, 1].scatter(range(len(data)), data, color='red')
+axes[0, 1].set_title('Scatter Plot')
+
+axes[1, 0].hist(data, bins=5, color='green', edgecolor='black')
+axes[1, 0].set_title('Histogram')
+
+axes[1, 1].boxplot(data, patch_artist=True)
+axes[1, 1].set_title('Box Plot')
+
+plt.tight_layout()
+plt.show()
