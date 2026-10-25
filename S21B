@@ -1,0 +1,13 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+d1 = np.random.normal(loc=50, scale=10, size=500)
+d2 = np.random.normal(loc=60, scale=15, size=500)
+
+plt.hist(d1, bins=20, alpha=0.5, label='Dataset 1', color='blue', edgecolor='black')
+plt.hist(d2, bins=20, alpha=0.5, label='Dataset 2', color='red', edgecolor='black')
+
+plt.title('Histograms of Two Normal Distributions')
+plt.legend()
+plt.show()
