@@ -1,0 +1,8 @@
+import numpy as np
+
+marks = np.array([78, 85, 62, 90, 95, 88, 71, 99, 82, 65])
+sorted_marks = np.sort(marks)
+top_3 = sorted_marks[-3:][::-1]
+
+print("Sorted Marks:", sorted_marks)
+print("Top 3 Marks:", top_3)
