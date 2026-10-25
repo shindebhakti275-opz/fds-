@@ -1,0 +1,11 @@
+import pandas as pd
+
+sales = [12.5, 14.0, 15.2, 11.8, 16.5, 18.0, 17.2, 19.1, 15.0, 13.4, 16.8, 20.1]
+sales_series = pd.Series(sales)
+
+sales_range = sales_series.max() - sales_series.min()
+variance = sales_series.var()
+std_dev = sales_series.std()
+
+print(f"Range: {sales_range:.2f} Lakh")
+print(f"Variance: {variance:.2f}")
