@@ -1,0 +1,11 @@
+import pandas as pd
+
+students = {
+    'Name': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
+    'Age': [20, 21, 19, 22, 20, 21, 23, 20],
+    'Course': ['BCA'] * 8,
+    'Marks': [85, 78, 92, 66, 74, 88, 91, 82]
+}
+
+df = pd.DataFrame(students)
+print(df.head(5))
