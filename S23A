@@ -1,0 +1,11 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'Product': ['A', 'B', 'C', 'D', 'E'],
+    'Price': [100, 250, 400, 150, 300]
+})
+
+print("DataFrame:\n", df)
+print(f"Max Price: {df['Price'].max()}")
+print(f"Min Price: {df['Price'].min()}")
+print(f"Avg Price: {df['Price'].mean():.2f}")
