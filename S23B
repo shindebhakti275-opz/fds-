@@ -1,0 +1,9 @@
+import numpy as np
+from sklearn.preprocessing import normalize
+
+data = np.array([[10, 20, 30], [40, 50, 60]])
+l1_normalized = normalize(data, norm='l1', axis=1)
+
+print("Original Data:\n", data)
+print("\nL1 Normalized Data (Row Sum = 1):\n", l1_normalized)
+print("Row Sums:", np.sum(l1_normalized, axis=1))
