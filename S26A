@@ -1,0 +1,8 @@
+import numpy as np
+from sklearn.preprocessing import scale
+
+arr = np.array([[1.0, -1.0, 2.0], [2.0, 0.0, 0.0], [0.0, 1.0, -1.0]])
+scaled_arr = scale(arr)
+
+print("Original Array:\n", arr)
+print("\nStandardized Array:\n", scaled_arr)
