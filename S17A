@@ -1,0 +1,7 @@
+import numpy as np
+
+ages = np.array([23, 45, 31, 35, 29, 52, 40, 26, 38, 48])
+
+print("Minimum Age:", np.min(ages))
+print("Maximum Age:", np.max(ages))
+print("Average Age:", np.mean(ages))
