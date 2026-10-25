@@ -1,0 +1,12 @@
+import pandas as pd
+
+staff_data = {
+    'staff_id': [101, 102, 103, 104, 105],
+    'employee_name': ['John', 'Jane', 'Alex', 'Emily', 'Chris'],
+    'department': ['HR', 'IT', 'Finance', 'IT', 'Marketing'],
+    'monthly_salary': [45000, 65000, 55000, 60000, 50000]
+}
+pd.DataFrame(staff_data).to_csv('staff.csv', index=False)
+
+df = pd.read_csv('staff.csv')
+print(df)
