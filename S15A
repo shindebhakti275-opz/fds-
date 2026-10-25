@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+names = ['Alice', 'Bob', 'Charlie', 'David', 'Eva']
+percentages = [85, 92, 78, 65, 88]
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+# Pie Chart
+axes[0].pie(percentages, labels=names, autopct='%1.1f%%', startangle=90)
+axes[0].set_title('Student Percentages (Pie Chart)')
+
+# Bar Chart
+axes[1].bar(names, percentages, color='skyblue')
+axes[1].set_title('Student Percentages (Bar Chart)')
+axes[1].set_ylabel('Percentage')
+
+plt.tight_layout()
+plt.show()
