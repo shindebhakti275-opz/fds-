@@ -1,0 +1,8 @@
+import numpy as np
+from sklearn.preprocessing import normalize
+
+data = np.array([[3, 4], [1, 2], [5, 12]])
+norm_data = normalize(data, norm='l2', axis=1)
+
+print("Original Data:\n", data)
+print("\nUnit-Length Normalized Data:\n", norm_data)
