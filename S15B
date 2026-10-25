@@ -1,0 +1,12 @@
+import pandas as pd
+
+pd.DataFrame({'A': [10, 20, 30, 40, 50]}).to_csv('data.csv', index=False)
+
+df = pd.read_csv('data.csv')
+
+print("DataFrame:\n", df)
+print("\ndescribe():\n", df.describe())
+print("\nhead():\n", df.head(2))
+print("\ntail():\n", df.tail(2))
+print("\nmax():\n", df.max())
+print("\nmin():\n", df.min())
