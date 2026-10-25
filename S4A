@@ -1,0 +1,11 @@
+import pandas as pd
+
+products = {
+    'Product_Name': ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Mouse', 'Keyboard', 'Headphones', 'Printer'],
+    'Brand': ['Dell', 'Apple', 'Samsung', 'LG', 'Logitech', 'HP', 'Sony', 'Canon'],
+    'Category': ['Electronics'] * 8,
+    'Price': [60000, 80000, 30000, 15000, 1200, 1500, 5000, 12000]
+}
+
+df = pd.DataFrame(products)
+print(df.head(5))
