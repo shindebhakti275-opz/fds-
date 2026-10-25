@@ -1,0 +1,15 @@
+import pandas as pd
+
+data = {
+    'Name': ['Shyama', 'Shreeji', 'Ramya', 'Radha', 'Satya'],
+    'Address': ['Pune', 'Mumbai', 'Delhi', 'Mumbai', 'Pune'],
+    'Age': [20, 19, None, 21, 22],
+    'Class': ['BSc (Chemistry)', 'BSc (Physics)', 'BSc (Biology)', 'BSc (Zoology)', 'BSc (CS)']
+}
+df = pd.DataFrame(data)
+
+df['Age'] = df['Age'].fillna(df['Age'].mean())
+
+df = pd.get_dummies(df, columns=['Address'])
+
+print(df)
