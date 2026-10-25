@@ -1,0 +1,15 @@
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+
+data = {
+    'Country': ['India', 'USA', 'India', 'France', 'USA'],
+    'Purchased': ['No', 'Yes', 'Yes', 'No', 'Yes']
+}
+df = pd.DataFrame(data)
+
+df_encoded = pd.get_dummies(df, columns=['Country'])
+
+le = LabelEncoder()
+df_encoded['Purchased_Encoded'] = le.fit_transform(df['Purchased'])
+
+print(df_encoded)
