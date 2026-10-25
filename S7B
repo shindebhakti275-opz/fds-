@@ -1,0 +1,12 @@
+import pandas as pd
+
+student_data = {
+    'Roll No': [1, 2, 3, 4, 5],
+    'Name': ['A', 'B', 'C', 'D', 'E'],
+    'Percentage': [85.5, 90.0, 85.5, 78.0, 92.5]
+}
+df = pd.DataFrame(student_data)
+
+print(f"Mean Percentage: {df['Percentage'].mean():.2f}")
+print(f"Median Percentage: {df['Percentage'].median()}")
+print(f"Mode Percentage: {df['Percentage'].mode()[0]}")
