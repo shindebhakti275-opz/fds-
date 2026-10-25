@@ -1,0 +1,11 @@
+import numpy as np
+
+marks = np.array([45, 88, 92, 67, 30, 75, 82, 55, 95, 40])
+
+group1 = np.sum(marks < 50)
+group2 = np.sum((marks >= 50) & (marks < 75))
+group3 = np.sum(marks >= 75)
+
+print(f"Group 1 (<50): {group1} students")
+print(f"Group 2 (50-74): {group2} students")
+print(f"Group 3 (>=75): {group3} students")
