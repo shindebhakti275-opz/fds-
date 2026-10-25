@@ -1,0 +1,15 @@
+import pandas as pd
+
+raw_data = {
+    'Name': ['Smaran', 'Sachin', 'Samarpan', 'Spandan', 'Shaman'],
+    'Address': ['Pune', 'Mumbai', 'Delhi', 'Chennai', 'Madurai'],
+    'Age': [20, 23, 19, 21, 22],
+    'Class': ['ME', 'MSc (CA)', 'MVOC', 'MCom', 'MSc']
+}
+pd.DataFrame(raw_data).to_csv('StudentData.csv', index=False)
+
+df = pd.read_csv('StudentData.csv')
+
+print("a) Statistical Description:\n", df.describe(include='all'))
+print("\nb) Shape of dataset:", df.shape)
+print("\nc) First two rows:\n", df.head(2))
