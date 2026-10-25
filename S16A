@@ -1,0 +1,16 @@
+import pandas as pd
+
+data = {
+    'rollno': [1, 2, 3],
+    'name': ['A', 'B', 'C'],
+    'mark1': [80, 70, 90],
+    'mark2': [85, 75, 95],
+    'mark3': [88, 78, 98]
+}
+
+df = pd.DataFrame(data)
+
+print("Max:\n", df[['mark1', 'mark2', 'mark3']].max())
+print("Min:\n", df[['mark1', 'mark2', 'mark3']].min())
+print("Describe:\n", df.describe())
+print("Shape:", df.shape)
