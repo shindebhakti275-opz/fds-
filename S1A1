@@ -1,0 +1,12 @@
+import pandas as pd
+data = {
+    'Employee_Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva', 'Frank', 'Grace', 'Henry'],
+    'Department': ['HR', 'IT', 'Finance', 'IT', 'HR', 'Finance', 'IT', 'Marketing'],
+    'Designation': ['Manager', 'Developer', 'Analyst', 'Developer', 'Executive', 'Manager', 'Lead', 'Executive'],
+    'Salary': [60000, 75000, 50000, 70000, 45000, 80000, 90000, 48000]
+}
+
+df = pd.DataFrame(data)
+
+print("First 5 Records:")
+print(df.head(5))
