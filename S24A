@@ -1,0 +1,11 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'Student': ['A', 'B', 'C', 'D', 'E', 'F'],
+    'Study_Hours': [2, 4, 6, 8, 5, 7],
+    'Marks': [50, 60, 75, 90, 70, 85]
+})
+
+print("First 3 Rows:\n", df.head(3))
+print("\nLast 3 Rows:\n", df.tail(3))
+print("\nShape:", df.shape)
